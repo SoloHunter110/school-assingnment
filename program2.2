@@ -1,0 +1,21 @@
+//2 b.  WAC++P to display any table using do-while loop
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, i = 1;
+
+    cout << "Enter a number to display its table: ";
+    cin >> num;
+
+    cout << "\nMultiplication Table of " << num << ":\n";
+
+    // do-while loop to print table
+    do {
+        cout << num << " x " << i << " = " << num * i << endl;
+        i++;
+    } while (i <= 10);
+
+    return 0;
+}
