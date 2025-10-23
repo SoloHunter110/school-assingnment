@@ -1,0 +1,34 @@
+a) WAC++P that display grade percentage wise using nested if else.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float percentage;
+
+    cout << "Enter your percentage: ";
+    cin >> percentage;
+
+    if (percentage >= 0 && percentage <= 100) {
+        if (percentage >= 90)
+            cout << "Grade: A+" << endl;
+        else if (percentage >= 80)
+            cout << "Grade: A" << endl;
+        else if (percentage >= 70)
+            cout << "Grade: B" << endl;
+        else if (percentage >= 60)
+            cout << "Grade: C" << endl;
+        else if (percentage >= 50)
+            cout << "Grade: D" << endl;
+        else if (percentage >= 40)
+            cout << "Grade: E" << endl;
+        else
+            cout << "Grade: F (Fail)" << endl;
+    } 
+    else {
+        cout << "Invalid percentage! Please enter between 0 and 100." << endl;
+    }
+
+    return 0;
+}
+  
