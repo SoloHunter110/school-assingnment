@@ -1,0 +1,21 @@
+//2 a. WAC++P to display a pattern like a right-angle triangle using an astterisk.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rows;
+    cout << "Enter number of rows: ";
+    if (!(cin >> rows) || rows <= 0) {
+        cout << "Please enter a positive integer.\n";
+        return 1;
+    }
+
+    // Left-aligned increasing right-angle triangle
+    for (int i = 1; i <= rows; ++i) {
+        for (int j = 1; j <= i; ++j)
+            cout << "* ";
+        cout << '\n';
+    }
+
+    return 0;
+}
