@@ -1,0 +1,31 @@
+//3  b. Write a C++ program to calculate gross salary of an employee using class. 
+//      Few member functions must be defined outside the class using scope 
+//      resolution operator. (Gross salary = basic salary + TA + DA, TA = 15% 
+//      of basic salary, DA = 30% of basic salary)
+
+
+#include <iostream>
+using namespace std;
+
+class Employee {
+private:
+    float basicSalary;
+
+public:
+    void setSalary();
+    float calculateTA();
+    float calculateDA();
+    float calculateGrossSalary();
+};
+
+void Employee::setSalary() {
+    cout << "Enter Basic Salary: ";
+    cin >> basicSalary;
+}
+
+float Employee::calculateTA() {
+    return 0.15 * basicSalary;
+}
+
+float Employee::calcu
+
