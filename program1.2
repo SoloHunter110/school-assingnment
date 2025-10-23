@@ -1,0 +1,37 @@
+b) WAC++P which convert temperature from celsius to fahrenheit and fahrenheit to 
+celsius using switch case.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    float celsius, fahrenheit;
+
+    cout << "Temperature Conversion Menu:\n";
+    cout << "1. Celsius to Fahrenheit\n";
+    cout << "2. Fahrenheit to Celsius\n";
+    cout << "Enter your choice (1 or 2): ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1:
+            cout << "Enter temperature in Celsius: ";
+            cin >> celsius;
+            fahrenheit = (celsius * 9 / 5) + 32;
+            cout << "Temperature in Fahrenheit = " << fahrenheit << " °F" << endl;
+            break;
+
+        case 2:
+            cout << "Enter temperature in Fahrenheit: ";
+            cin >> fahrenheit;
+            celsius = (fahrenheit - 32) * 5 / 9;
+            cout << "Temperature in Celsius = " << celsius << " °C" << endl;
+            break;
+
+        default:
+            cout << "Invalid choice! Please enter 1 or 2." << endl;
+    }
+
+    return 0;
+}
