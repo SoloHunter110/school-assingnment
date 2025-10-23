@@ -1,0 +1,39 @@
+//3 a. Write a C++ program to implement a Student class having data members as
+//     Name, Roll Number, and PRN. Implement methods to enter details of a single 
+//     student. (The data members must be private)
+
+
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int rollNumber;
+    string prn;
+
+public:
+    void enterDetails() {
+        cout << "Enter Name: ";
+        getline(cin, name);
+        cout << "Enter Roll Number: ";
+        cin >> rollNumber;
+        cin.ignore(); // Clear newline from buffer
+        cout << "Enter PRN: ";
+        getline(cin, prn);
+    }
+
+    void displayDetails() {
+        cout << "\nStudent Details:\n";
+        cout << "Name: " << name << "\n";
+        cout << "Roll Number: " << rollNumber << "\n";
+        cout << "PRN: " << prn << "\n";
+    }
+};
+
+int main() {
+    Student s;
+    s.enterDetails();
+    s.displayDetails();
+    return 0;
+}
